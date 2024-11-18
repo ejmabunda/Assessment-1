@@ -10,9 +10,11 @@ def grade_average(grades):
     if grades == []:
         return -1
     
+    # Filter out positive grades
     positive_grades = list(
         filter(lambda grade: grade > 0, grades)
     )
+
     if positive_grades == []:
         return 0
     
@@ -34,6 +36,8 @@ def find_prime_factors(number):
 
 
 def is_prime(n):
+    """Checks whether a number is prime
+    """
     for num in range(1, n + 1):
         if n % num == 0 and (num != 1 and num != n):
             return False
@@ -51,9 +55,9 @@ def calculate_interest(principal, rate, years):
     """
     amount = principal
     for _ in range(years):
-        amount += principal * rate
+        amount += amount * rate
 
-    return amount
+    return round(amount, 2)
 
 
 def code_word(code):

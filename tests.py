@@ -20,7 +20,7 @@ class TestCase(unittest.TestCase):
 
     def test_interest(self):
         # write tests that cater for the output being an integer, unexpected outputs and expected ouputs
-        self.assertEqual(calculate_interest(10000, 0.05, 5), 0)
+        self.assertEqual(calculate_interest(10000, 0.05, 5), 12762.82)
 
 
     def test_code_word(self):
